@@ -1,23 +1,23 @@
 <?php
 /**
- * EGroupware - Example - Business logic
+ * EGroupware - Hosts - Business logic
  *
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb-AT-egroupware.org>
- * @package example
+ * @package hosts
  * @subpackage setup
  * @copyright (c) 2023 by Ralf Becker <rb-AT-egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  */
 
-namespace EGroupware\Example;
+namespace EGroupware\Hosts;
 
 use EGroupware\Api;
 
 class Hooks
 {
 	/**
-	 * Hook called by link-class to include example app / host in the appregistry of the linkage
+	 * Hook called by link-class to include hosts app / host in the appregistry of the linkage
 	 *
 	 * @param array|string $location location and other parameters (not used)
 	 * @return array with method-names
@@ -51,7 +51,7 @@ class Hooks
 	}
 
 	/**
-	 * hooks to build example app's sidebox-menu plus the admin and preferences sections
+	 * hooks to build hosts app's sidebox-menu plus the admin and preferences sections
 	 *
 	 * @param string|array $args hook args
 	 */

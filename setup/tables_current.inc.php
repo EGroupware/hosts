@@ -5,13 +5,13 @@
  * Created by eTemplates DB-Tools written by ralfbecker@outdoor-training.de
  *
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
- * @package example
+ * @package hosts
  * @subpackage setup
  */
 
 
 $phpgw_baseline = array(
-	'egw_example' => array(
+	'egw_hosts' => array(
 		'fd' => array(
 			'host_id' => array('type' => 'auto','nullable' => False),
 			'host_name' => array('type' => 'varchar','precision' => '64','nullable' => False),
@@ -26,7 +26,7 @@ $phpgw_baseline = array(
 		'ix' => array(),
 		'uc' => array()
 	),
-	'egw_example_extra' => array(
+	'egw_hosts_extra' => array(
 		'fd' => array(
 			'host_id' => array('type' => 'int','precision' => '4','nullable' => False),
 			'host_extra_name' => array('type' => 'varchar','meta' => 'cfname','precision' => '64','nullable' => False),

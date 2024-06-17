@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE overlay PUBLIC "-//EGroupware GmbH//eTemplate 2.0//EN" "https://www.egroupware.org/etemplate2.0.dtd">
 <overlay>
-	<template id="example.index.rows" template="" lang="" group="0" version="19.1.001">
+	<template id="hosts.index.rows" template="" lang="" group="0" version="19.1.001">
 		<grid width="100%">
 			<columns>
 				<column width="15"/>
@@ -40,10 +40,10 @@
 			</rows>
 		</grid>
 	</template>
-	<template id="example.index.add" template="" lang="" group="0" version="19.1.001">
-		<et2-button  statustext="Add" id="add" onclick="egw(window).openPopup(egw::link('/index.php','menuaction=example.EGroupware\\Example\\Ui.edit'),'640','480','_blank','example',null,true); return false;" noSubmit="true"></et2-button>
+	<template id="hosts.index.add" template="" lang="" group="0" version="19.1.001">
+		<et2-button  statustext="Add" id="add" onclick="egw(window).openPopup(egw::link('/index.php','menuaction=hosts.EGroupware\\Hosts\\Ui.edit'),'640','480','_blank','hosts',null,true); return false;" noSubmit="true"></et2-button>
 	</template>
-	<template id="example.index" template="" lang="" group="0" version="19.1.001">
-		<nextmatch id="nm" options="example.index.rows" header_left="example.index.add"/>
+	<template id="hosts.index" template="" lang="" group="0" version="19.1.001">
+		<nextmatch id="nm" options="hosts.index.rows" header_left="hosts.index.add"/>
 	</template>
 </overlay>

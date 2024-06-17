@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE overlay PUBLIC "-//EGroupware GmbH//eTemplate 2.0//EN" "https://www.egroupware.org/etemplate2.0.dtd">
 <overlay>
-	<template id="example.edit.notes" template="" lang="" group="0" version="19.1.001">
+	<template id="hosts.edit.notes" template="" lang="" group="0" version="19.1.001">
 		<et2-textarea  id="host_description" rows="14" cols="70"></et2-textarea>
 	</template>
-	<template id="example.edit.links" template="" lang="" group="0" version="19.1.001">
+	<template id="hosts.edit.links" template="" lang="" group="0" version="19.1.001">
 		<grid width="100%" overflow="auto">
 			<columns>
 				<column width="99%"/>
@@ -22,7 +22,7 @@
 			</rows>
 		</grid>
 	</template>
-	<template id="example.edit" template="" lang="" group="0" version="19.1">
+	<template id="hosts.edit" template="" lang="" group="0" version="19.1">
 		<grid width="100%">
 			<columns>
 				<column width="100"/>
@@ -40,8 +40,8 @@
 							<tab id="links" label="Links"/>
 						</tabs>
 						<tabpanels>
-							<template id="example.edit.notes"/>
-							<template id="example.edit.links"/>
+							<template id="hosts.edit.notes"/>
+							<template id="hosts.edit.links"/>
 						</tabpanels>
 					</et2-tabbox>
 				</row>

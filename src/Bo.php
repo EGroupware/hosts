@@ -1,24 +1,24 @@
 <?php
 /**
- * EGroupware - Example - Business logic
+ * EGroupware - Hosts - Business logic
  *
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb-AT-egroupware.org>
- * @package example
+ * @package hosts
  * @subpackage setup
  * @copyright (c) 2023 by Ralf Becker <rb-AT-egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  */
 
-namespace EGroupware\Example;
+namespace EGroupware\Hosts;
 
 use EGroupware\Api;
 
 class Bo extends Api\Storage
 {
-	const APP = 'example';
-	const TABLE = 'egw_example';
-	const EXTRA_TABLE = 'egw_example_extra';
+	const APP = 'hosts';
+	const TABLE = 'egw_hosts';
+	const EXTRA_TABLE = 'egw_hosts_extra';
 
 	/**
 	 * Constructor
@@ -58,7 +58,7 @@ class Bo extends Api\Storage
 	}
 
 	/**
-	 * Deletes an example entry identified by $keys or the loaded one
+	 * Deletes an hosts entry identified by $keys or the loaded one
 	 *
 	 * Reimplemented to notify the link class (unlink)
 	 *
@@ -76,14 +76,14 @@ class Bo extends Api\Storage
 
 		if (($ret = parent::delete($keys)) && $host_id)
 		{
-			// delete all links to example entry $host_id
+			// delete all links to hosts entry $host_id
 			Api\Link::unlink(0, self::APP, $host_id);
 		}
 		return $ret;
 	}
 
 	/**
-	 * get name for an example entry / host identified by $entry
+	 * get name for an hosts entry / host identified by $entry
 	 *
 	 * Is called as hook to participate in the linking
 	 *
@@ -109,7 +109,7 @@ class Bo extends Api\Storage
 	}
 
 	/**
-	 * query example app for entries matching $pattern
+	 * query hosts app for entries matching $pattern
 	 *
 	 * Is called as hook to participate in the linking
 	 *

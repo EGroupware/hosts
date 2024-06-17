@@ -1,16 +1,16 @@
 <?php
 /**
- * EGroupware - Example - User interface
+ * EGroupware - Hosts - User interface
  *
  * @link http://www.egroupware.org
  * @author Ralf Becker <rb-AT-egroupware.org>
- * @package example
+ * @package hosts
  * @subpackage setup
  * @copyright (c) 2019 by Ralf Becker <rb-AT-egroupware.org>
  * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  */
 
-namespace EGroupware\Example;
+namespace EGroupware\Hosts;
 
 use EGroupware\Api;
 
@@ -111,8 +111,8 @@ class Ui
 		$readonlys = [
 			'button[delete]' => !$content['host_id'],
 		];
-		$tmpl = new Api\Etemplate('example.edit');
-		$tmpl->exec('example.'.self::class.'.edit', $content, [], $readonlys, $content, 2);
+		$tmpl = new Api\Etemplate('hosts.edit');
+		$tmpl->exec('hosts.'.self::class.'.edit', $content, [], $readonlys, $content, 2);
 	}
 
 	/**
@@ -161,8 +161,8 @@ class Ui
 				Api\Framework::message($ex->getMessage(), 'error');
 			}
 		}
-		$tmpl = new Api\Etemplate('example.index');
-		$tmpl->exec('example.'.self::class.'.index', $content, [], [], ['nm' => $content['nm']]);
+		$tmpl = new Api\Etemplate('hosts.index');
+		$tmpl->exec('hosts.'.self::class.'.index', $content, [], [], ['nm' => $content['nm']]);
 	}
 
 	/**
@@ -178,19 +178,19 @@ class Ui
 				'caption' => 'View',
 				'default' => true,
 				'allowOnMultiple' => false,
-				'onExecute' => 'javaScript:app.example.view',
+				'onExecute' => 'javaScript:app.hosts.view',
 				'group' => $group=0,
 			],
 			'edit' => [
 				'caption' => 'Edit',
 				'allowOnMultiple' => false,
-				'url' => 'menuaction=example.'.self::class.'.edit&host_id=$id',
+				'url' => 'menuaction=hosts.'.self::class.'.edit&host_id=$id',
 				'popup' => '640x480',
 				'group' => $group,
 			],
 			'add' => [
 				'caption' => 'Add',
-				'url' => 'menuaction=example.'.self::class.'.edit',
+				'url' => 'menuaction=hosts.'.self::class.'.edit',
 				'popup' => '640x320',
 				'group' => $group,
 			],
